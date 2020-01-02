@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { Form, Icon, Input, Button } from 'antd';
+import { fetchRepos } from '../store/actions'
+import { useDispatch, useSelector } from 'react-redux'
 
 export default () => {
   const [username, setUsername] = useState('')
+  const dispatch = useDispatch()
+  const repos = useSelector(state => state.repos)
 
   const handleSubmit = e => {
     e.preventDefault()
     console.log(username)
+    dispatch(fetchRepos(username))
   }
 
   return (
@@ -27,6 +32,7 @@ export default () => {
           </Button>
         </Form.Item>
       </Form>
+      <p>{JSON.stringify(repos)}</p>
     </>
   )
 }
