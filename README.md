@@ -1,3 +1,14 @@
+Access deployed app to:
+[http://searchrepos.satyowicaksana.com](http://searchrepos.satyowicaksana.com).
+
+## How to run
+```
+$ git clone https://github.com/satyowicaksana/react-technical-test.git
+$ cd react-technical-test
+$ npm install
+$ npm start
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
